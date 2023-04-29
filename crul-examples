@@ -1,0 +1,18 @@
+--- posts ----
+curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"post\"}" "localhost:5000/post"
+curl -v http://127.0.0.1:5000/post/2
+curl -v http://127.0.0.1:5000/post/thread/2
+curl -X DELETE http://127.0.0.1:5000/post/9/delete/895265e9-1354-460f-a411-e9e1dfff36df
+
+curl -X POST -H "Content-type: application/json" -d "{\"start_time\" : \"2023-04-29 00:00:00\", \"end_time\" : \"2023-04-29 19:19:00\"}" "localhost:5000/post/search"
+curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Hardik\"}" "localhost:5000/post"
+curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Nayan\"}" "localhost:5000/post"
+curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Moradiya\", \"parent\" : 1}" "localhost:5000/post"
+curl -X POST -H "Content-type: application/json" -d "{\"q\" : \"Hardik\"}" "localhost:5000/post/full_search"
+
+
+---- users----
+
+curl -X POST -H "Content-type: application/json" -d "{\"username\" : \"hardik07\", \"realname\" : \"hardik\"}" "localhost:5000/user"
+curl -X POST -H "Content-type: application/json" -d "{\"username\" : \"hardik07\", \"realname\" : \"hardik\"}" "localhost:5000/user"
+curl -v http://127.0.0.1:5000/user/1
