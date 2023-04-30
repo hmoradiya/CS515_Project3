@@ -43,7 +43,7 @@ def get_user_by_id(user_id):
     return object_as_dict(user)
 
 
-@bp.route('/update/<int:key>', methods=['PUT'])
+@bp.route('/update/<key>', methods=['PUT'])
 def update_user(key):
 
     new_username = request.json.get('new_username')
