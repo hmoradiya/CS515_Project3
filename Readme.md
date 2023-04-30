@@ -30,6 +30,7 @@ A Basic API tested commands
 1. Create Simple Post:
    1. Route: /post
       1. It is used to create post and for success we are returning id, msg, timestamp, key, parents and replies with status 200.
+
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Hardik\"}" "localhost:5000/post"
       
@@ -41,8 +42,10 @@ A Basic API tested commands
 2. Get Post:
    1. Route: /post/<post-id>
       1. It is used to get post by it's id. for success response we return id, msg, timestamp, key, parents and replies with status 200.
+
       --> Ubuntu: 
       >>> curl -v http://localhost:5000/post/2
+
       --> Windows: 
       >>> Invoke-WebRequest -Method GET -Uri "http://localhost:5000/post/2" -Verbose
 
@@ -51,8 +54,10 @@ A Basic API tested commands
 3. Delete Post:
    1. Route: /post/<post-id>/delete/<post-key>
       1. It is used to delete post by it's id. for success response msg post deleted successfully with status 200.
+
       --> Ubuntu: 
       >>> curl -X DELETE http://localhost:5000/post/1/delete/<post-key>
+
       --> Windows: 
       >>> Invoke-WebRequest -Method DELETE -Uri "http://localhost:5000/post/2/delete/<post:key>" -Verbose
 
@@ -80,8 +85,10 @@ NO
 1. User and User Keys
    1. Route: /user
       1. It is used to create new user. for success we are returning id, username, realname, key, timestamp with status 200.
+
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"username\" : \"hardik612\", \"realname\" : \"hardik612\"}" "localhost:5000/user"
+
       --> Windows: 
       >>> Invoke-WebRequest -Method POST -Uri "http://localhost:5000/user" -Headers @{"Content-Type"="application/json"} -Body '{"username":"hardik612", "realname":"hardik612"}'
       
@@ -89,8 +96,10 @@ NO
 
    2. Route: /user/<user-id>
       1. It is used to get user by it's id. for success we are returning id, username, realname, key, timestamp with status 200.
+
       --> Ubuntu: 
       >>> curl -v http://localhost:5000/user/1
+
       --> Windows: 
       >>> Invoke-WebRequest -Method GET -Uri "http://127.0.0.1:5000/user/1" -Verbose
 
@@ -98,8 +107,10 @@ NO
 
    3. Route: /user/update/<user-key>
       1. It is used to update user based on user key and for success we are returning id, username, realname, key, timestamp with status 200.
+
       --> Ubuntu: 
       >>> curl -X PUT -H "Content-type: application/json" -d "{\"new_username\" : \"hardik1007\", \"new_realname\" : \"hardik\"}" "localhost:5000/user/update/f501d15eb52e870908b04efcda316cb7"
+
       --> Windows: 
       >>> Invoke-WebRequest -Method PUT -Uri "http://localhost:5000/user/update/f501d15eb52e870908b04efcda316cb7" -Headers @{"Content-Type"="application/json"} -Body '{"new_username":"hardik1007", "new_realname":"hardik"}'
 
@@ -108,8 +119,10 @@ NO
 2. Threaded Replies
    1. Route: /post/<post-id>
       1. It is used to get post by it's id. for success response we return id, msg, timestamp, key, parents and replies with status 200.
+
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Moradiya\", \"parent\" : 1}" "localhost:5000/post"
+
       --> Windows: 
       >>> Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post" -Headers @{"Content-Type"="application/json"} -Body '{"msg":"Moradiya", "parent":1}'
 
@@ -118,8 +131,10 @@ NO
 3. Date and time based range queries
    1. Route: /post/search
       1. For success response we are returning list of matching posts.
+
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"start_time\" : \"2023-04-29 00:00:00\", \"end_time\" : \"2023-04-29 19:19:00\"}" "localhost:5000/post/search"
+      
       --> Windows: 
       >>> Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post/search" -Headers @{"Content-Type"="application/json"} -Body '{"start_time":"2023-04-29 00:00:00", "end_time":"2023-04-29 19:19:00"}'
 
@@ -128,8 +143,10 @@ NO
 4. Thread based range queries
    1. Route: /post/thread/<post-id>
       1. For success response it will give full thread (list of all posts in that thread) with status 200.
+      
       --> Ubuntu: 
       >>> List of thread post for a post: curl -v http://localhost:5000/post/thread/2
+
       --> Windows: 
       >>> Invoke-WebRequest -Method GET -Uri "http://localhost:5000/post/thread/2" -Verbose
 
@@ -138,8 +155,10 @@ NO
 5. Full text search
    1. Route: /post/full_search
       1. It searches the message by text, if a message include the text, than that post will be returned. We expect the result code is 200 and the return list is correct.
+
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"q\" : \"Hardik\"}" "localhost:5000/post/full_search"
+      
       --> Windows: 
       >>> Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post/full_search" -Headers @{"Content-Type"="application/json"} -Body '{"q":"Hardik"}'
 
