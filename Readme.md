@@ -1,26 +1,29 @@
-# Web Forum
+Hardik Moradiya hmoradiy@stevens.edu Prashanth Pulikonda ppulikon1@stevens.edu
 
-Using Flask to build web forum
+**URL of GitHub repo** https://github.com/hmoradiya/CS515_Project3
 
-Integration with Flask-SQLalchemy
+**hr. to complate project** 45hr
 
-## Installation
-Install with pip:
+**Description of testing**
 
-```
-$ pip install -r requirements.txt
-```
+Before moving to testing first of all use below comand to complate basic instalation.
 
-## Database setup
-```
-$ flask shell
+We have used Flask to build web forum and Integration with Flask-SQLalchemy
+
+Step 1: We need Install with pip
+>>> pip install -r requirements.txt
+
+step 2: In the next step we going to setup Database, We used SQL lite Database.
+Follow the step one by one, which is mentioned below,
 >>> from app.extensions import db
 >>> from app.models.post import Post
 >>> from app.models.user import User
 >>> db.create_all()
-```
 
-## A Basic API commands
+step 3: After complate these two steps, we run our server using the below comand,
+flask run
+
+A Basic API tested commands
 1. Create Simple Post:
    1. Ubuntu: curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Hardik\"}" "localhost:5000/post"
    2. Windows: Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post" -Headers @{"Content-Type"="application/json"} -Body '{"msg" : "post"}'
@@ -33,12 +36,30 @@ $ flask shell
    1. Ubuntu: curl -X DELETE http://localhost:5000/post/1/delete/<post-key>
    2. Windows: Invoke-WebRequest -Method DELETE -Uri "http://localhost:5000/post/2/delete/<post:key>" -Verbose
 
+Extention tested commands
 
-## A List Extensions added in this assignment
+
+**Bugs or Issues - not resolve**
+
+No
+
+**Difficult issue or bug and how you resolved**
+
+NO
+
+**List of 5 extensions which are we used in this project**
 1. User and User Keys
-   1. In this extension we can create users and return their id, key, username and realname for the success result.
-   2. For error result we are returning 400 and other status code with thier respective message. 
-   3. Commands:
+2. Threaded Replies
+3. Date and time based range queries
+4. Thread based range queries
+5. Full text search
+
+**Detailed summaries of our tests for each of your extensions**
+
+1. User and User Keys
+-In this extension we can create users and return their id, key, username   and realname for the success result.
+-For error result we are returning 400 and other status code with thier respective message. 
+-Tests Commands:
       1. Ubuntu:
          1. Create User: curl -X POST -H "Content-type: application/json" -d "{\"username\" : \"hardik07\", \"realname\" : \"hardik\"}" "localhost:5000/user"
          2. Get User: curl -v http://localhost:5000/user/1
@@ -74,7 +95,3 @@ $ flask shell
    2. Commnads:
       1. Ubuntu: curl -X POST -H "Content-type: application/json" -d "{\"q\" : \"Hardik\"}" "localhost:5000/post/full_search"
       2. Windows: Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post/full_search" -Headers @{"Content-Type"="application/json"} -Body '{"q":"Hardik"}'
-
-## Run Flask
-```
-$ flask run
