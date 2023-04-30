@@ -10,7 +10,6 @@ curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Prashanth\"}" 
 curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Moradiya\", \"parent\" : 1}" "localhost:5000/post"
 curl -X POST -H "Content-type: application/json" -d "{\"q\" : \"Hardik\"}" "localhost:5000/post/full_search"
 
-
 ---- users----
 
 curl -X POST -H "Content-type: application/json" -d "{\"username\" : \"hardik06\", \"realname\" : \"hardik\"}" "localhost:5000/user"

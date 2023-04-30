@@ -6,7 +6,7 @@ Hardik Moradiya hmoradiy@stevens.edu Prashanth Pulikonda ppulikon1@stevens.edu
 
 **Description of testing**
 
-Before moving to testing first of all use below comand to complate basic instalation.
+For testing, first of all use below comand to complate basic instalation.
 
 We have used Flask to build web forum and Integration with Flask-SQLalchemy
 
@@ -36,8 +36,7 @@ A Basic API tested commands
    1. Ubuntu: curl -X DELETE http://localhost:5000/post/1/delete/<post-key>
    2. Windows: Invoke-WebRequest -Method DELETE -Uri "http://localhost:5000/post/2/delete/<post:key>" -Verbose
 
-Extention tested commands
-
+-> For each Extention we test our code with Forum.postman_collection
 
 **Bugs or Issues - not resolve**
 
