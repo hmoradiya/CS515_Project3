@@ -16,8 +16,11 @@ Step 1: We need Install with pip
 step 2: In the next step we going to setup Database, We used SQL lite Database.
 Follow the step one by one, which is mentioned below,
 >>> from app.extensions import db
+
 >>> from app.models.post import Post
+
 >>> from app.models.user import User
+
 >>> db.create_all()
 
 step 3: After complate these two steps, we run our server using the below comand,
