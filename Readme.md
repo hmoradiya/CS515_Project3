@@ -32,6 +32,7 @@ A Basic API tested commands
       1. It is used to create post and for success we are returning id, msg, timestamp, key, parents and replies with status 200.
       --> Ubuntu: 
       >>> curl -X POST -H "Content-type: application/json" -d "{\"msg\" : \"Hardik\"}" "localhost:5000/post"
+      
       --> Windows: 
       >>> Invoke-WebRequest -Method POST -Uri "http://localhost:5000/post" -Headers @{"Content-Type"="application/json"} -Body '{"msg" : "post"}'
 
