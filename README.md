@@ -56,7 +56,7 @@ A Basic API tested commands
       1. It is used to delete post by it's id. for success response msg post deleted successfully with status 200.
 
       --> Ubuntu: 
-      >>> curl -X DELETE http://localhost:5000/post/1/delete/<post-key>
+      >>> curl -X DELETE http://localhost:5000/post/1/delete/<code>&#60;post-key&#62;</code>
 
       --> Windows: 
       >>> Invoke-WebRequest -Method DELETE -Uri "http://localhost:5000/post/2/delete/<post:key>" -Verbose
