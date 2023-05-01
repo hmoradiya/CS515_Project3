@@ -63,6 +63,10 @@ A Basic API tested commands
 
       2. If no post found for that particular id than it will return error Post not found with status 404.
 
+-> For baseline we test our codes with,
+1. forum_multiple_posts.postmane_collection.json
+2. forum_post_read_delete.postman_collection.json
+
 -> For each Extention we test our code with diffrent postman collection, which is listed below,
 1. User and User Keys -> user.postman_collection.json
 2. Threaded Replies -> Threaded-replies.postman_collection.json
