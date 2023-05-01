@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "22825ac7-f9de-40f9-a9a8-0cc5ea4b12a7",
+		"name": "Forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\": \"Hardik\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/post",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/post",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.2 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 30 Apr 2023 03:52:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"key\": \"bc36efab5faf1229e690a9958b160851\",\n    \"msg\": \"Hardik\",\n    \"parent_id\": null,\n    \"timestamp\": \"Sun, 30 Apr 2023 03:52:21 GMT\"\n}"
+				},
+				{
+					"name": "Create Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\": \"Moradiya\",\n    \"parenet\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/post",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"key\": \"1fed2303dff359c25bc1ff09190bc73c\",\n    \"msg\": \"Moradiya\",\n    \"parent_id\": 1,\n    \"timestamp\": \"Sun, 30 Apr 2023 03:55:50 GMT\"\n}"
+				}
+			]
+		}
+	]
+}

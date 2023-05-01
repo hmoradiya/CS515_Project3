@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "f31cd1ab-e28b-4300-bbb5-bbd4adde192a",
+		"name": "fulltext_search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Full Text Search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"q\" : \"Hardik\"}"
+				},
+				"url": {
+					"raw": "localhost:5000/post/full_search",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"full_search"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Full Text Search",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"q\" : \"Hardikkkk\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/post/full_search",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"full_search"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"key\": \"081478e2541242254ddf089f5abe3a76\",\n        \"msg\": \"Hardikkkk\",\n        \"parent_id\": null,\n        \"timestamp\": \"Sat, 29 Apr 2023 19:18:11 GMT\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

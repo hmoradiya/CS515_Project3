@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c0c8ec4e-9521-426a-9792-242ee76ee3a6",
+		"name": "forum_post_read_delete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/post/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Post",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/post/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"3"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"key\": \"b4c2d27d37e9cb3b3b9d5efd94a46305\",\n    \"msg\": \"Moradiya\",\n    \"parent\": 1,\n    \"parent_id\": 1,\n    \"timestamp\": \"Sat, 29 Apr 2023 19:19:24 GMT\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/post/2/delete/b4c2d27d37e9cb3b3b9d5efd94a46305",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"2",
+						"delete",
+						"b4c2d27d37e9cb3b3b9d5efd94a46305"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
