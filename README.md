@@ -40,7 +40,7 @@ A Basic API tested commands
       2. If request is not valid json or there no msg present in request params than it will return error bad request with status 400.
 
 2. Get Post:
-   1. Route: /post/<code><post-id></code>
+   1. Route: /post/<code>&#60;post-id&#62;</code>
       1. It is used to get post by it's id. for success response we return id, msg, timestamp, key, parents and replies with status 200.
 
       --> Ubuntu: 
@@ -52,7 +52,7 @@ A Basic API tested commands
       2. If no post found for that particular id than it will return error Post not found with status 404.
 
 3. Delete Post:
-   1. Route: /post/<post-id>/delete/<post-key>
+   1. Route: /post/<code>&#60;post-id&#62;</code>/delete/<code>&#60;post-key&#62;</code>
       1. It is used to delete post by it's id. for success response msg post deleted successfully with status 200.
 
       --> Ubuntu: 
@@ -103,7 +103,7 @@ NO
       
       2. If request is not valid json or username already exists than it will return error bad request with status 400.
 
-   2. Route: /user/<user-id>
+   2. Route: /user/<code>&#60;post-id&#62;</code>
       1. It is used to get user by it's id. for success we are returning id, username, realname, key, timestamp with status 200.
 
       --> Ubuntu: 
@@ -114,7 +114,7 @@ NO
 
       2. If no user found for that id we are returning 404 error.
 
-   3. Route: /user/update/<user-key>
+   3. Route: /user/update/<code>&#60;user-key&#62;</code>
       1. It is used to update user based on user key and for success we are returning id, username, realname, key, timestamp with status 200.
 
       --> Ubuntu: 
@@ -126,7 +126,7 @@ NO
       2. If request is not valid json or username already exists than it will return error bad request with status 400.
 
 2. Threaded Replies
-   1. Route: /post/<post-id>
+   1. Route: /post/<code>&#60;post-id&#62;</code>
       1. It is used to get post by it's id. for success response we return id, msg, timestamp, key, parents and replies with status 200.
 
       --> Ubuntu: 
@@ -150,7 +150,7 @@ NO
       2. To tell wheather it is valid start time and end time, if the start time is after the end time it raise an error, if the user didn't provide the time, it raise an error.
    
 4. Thread based range queries
-   1. Route: /post/thread/<post-id>
+   1. Route: /post/thread/<code>&#60;post-id&#62;</code>
       1. For success response it will give full thread (list of all posts in that thread) with status 200.
       
       --> Ubuntu: 
