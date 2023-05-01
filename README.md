@@ -40,7 +40,7 @@ A Basic API tested commands
       2. If request is not valid json or there no msg present in request params than it will return error bad request with status 400.
 
 2. Get Post:
-   1. Route: /post/<post-id>
+   1. Route: /post/<code><post-id></code>
       1. It is used to get post by it's id. for success response we return id, msg, timestamp, key, parents and replies with status 200.
 
       --> Ubuntu: 
